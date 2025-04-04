@@ -21,7 +21,7 @@ app.post("/products", myMiddleware, (request, response) => {
 
     // response.send(`Produto ${name} custa $ ${price}`)
 
-    response.status(201).json({ name, price })
+    response.status(201).json({ name, price, user_id: request.user_id })
 })
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`))
