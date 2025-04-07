@@ -71,8 +71,16 @@ ________________________________________________________________________________
 
 - A utilização do "Zod" permitiu simplificar o código, tornando a validação mais eficiente e facilitando a identificação de erros nos dados recebidos.
 
+- exibição de mensagens de erro ao lidar com validações.
+
+- identificar e tratar erros do Zod, exibindo mensagens personalizadas de erro e detalhes sobre os problemas de validação. 
+
+- personalizar mensagens de erro de validação: é útil para orientar melhor os usuários durante a validação de dados. 
+
+- Adicionado regras de validação.
+
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 
-Tecnologias: JAVASCRIPT. NODEJS.
+Tecnologias: TYPESCRIPT. NODEJS.
