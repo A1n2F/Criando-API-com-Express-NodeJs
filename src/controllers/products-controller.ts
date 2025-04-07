@@ -1,5 +1,6 @@
 import { Request, Response } from "express"
 import { AppError } from "../utils/app-error"
+import { z } from "zod"
 
 export class ProductsController {
     index(request: Request, response: Response) {
@@ -9,7 +10,12 @@ export class ProductsController {
     }
 
     create(request: Request, response: Response) {
-        const {name, price} = request.body
+        const bodySchema = z.object({
+            name: z.string(),
+            price: z.number()
+        })
+
+        const { name, price } = bodySchema.parse(request.body)
 
         if(!name) {
             throw new AppError("Nome do produto é obrigatório!")
